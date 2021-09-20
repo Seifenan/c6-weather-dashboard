@@ -1,5 +1,29 @@
-# c6-weather-dashboard
+# Server-Side APIs-C6: Weather Dashboard
 
+Unfortunately, I was unable to dedicate the required time for this challenge. My week has been hectic, as such, this challenge is far from complete. I will have it completed within the coming days and update my submission. It saddens me to submit something almost empty, given my previous submissions, but I had no time this week. 
+
+This weather app allows users to access weather information for multiple cities.
+
+### Weather Info:
+* Current and Future weather conditions
+  - Temperature
+  - Humitity
+  - Wind Speed
+* UV index
+ - Color change indicating conditions
+
+--- 
+# Submission  
+
+[Deployed URL Link](https://seifenan.github.io/c6-weather-dashboard/) 
+
+[Github Repository Link](https://github.com/Seifenan/c6-weather-dashboard) 
+
+>I was tasked with creating a calendar application that allows the user to save events for each hour of the business day. Each timeblock is color coded to indicate whether it is in the past (Grey), present (Red), or future (Green).
+
+## Completed Screenshot
+
+<img src="">
 
 # 06 Server-Side APIs: Weather Dashboard
 
