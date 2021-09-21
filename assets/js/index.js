@@ -26,7 +26,7 @@ function getWeather(city) {
       console.log(name,description,icon,temp,humidity,speed);
 
       document.querySelector(".name").innerHTML = name + " (" + currentDate + ")";
-      document.querySelector(".icon").src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+      document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
       document.querySelector(".description").innerHTML = "Weather Conditions: " + description;
       document.querySelector(".temp").innerHTML = "Temperature: " + temp + "° F";
       document.querySelector(".humidity").innerHTML = "Humidity Level: " + humidity + " %";
