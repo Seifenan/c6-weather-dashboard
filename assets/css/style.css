@@ -3,6 +3,26 @@
   align-items: center;
 }
 
-.description {
+.description,
+.resultDescription {
   text-transform: capitalize;
+}
+
+.forecast {
+  display: flex;
+  padding: 5%;
+}
+
+.resultContainer,
+.current {
+  padding: 3%;
+  margin: 0 auto;
+}
+
+ul:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  text-align: center;
 }
