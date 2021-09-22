@@ -1,3 +1,7 @@
+* {
+  color: white;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -13,16 +17,46 @@
   padding: 5%;
 }
 
-.resultContainer,
-.current {
+.userInput {
+  color: black;
+}
+
+.current,
+.resultContainer {
   padding: 3%;
   margin: 0 auto;
+  background-color: gray;
+  border-radius: 10%;
+  /* text-indent: 50%; */
+}
+
+ul {
+  /* color: black; */
 }
 
 ul:hover {
   text-decoration: underline;
 }
 
-.nav {
+.nav,
+.searchBtn {
   text-align: center;
+  background-color: #494949;
+}
+
+
+.recentSearch {
+  background-color: gray;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
 }

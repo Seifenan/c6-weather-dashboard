@@ -9,6 +9,8 @@ var historyEl = document.querySelector(".history");
 
 var recentSearch = document.querySelector(".recentSearch");
 
+// var current = document.querySelector(".current");
+
 var nameEl = document.querySelector(".name");
 
 var tempEl = document.querySelector(".temp");
@@ -20,6 +22,8 @@ var descriptionEl = document.querySelector(".description");
 var humidityEl = document.querySelector(".humidity");
 
 var speedEl = document.querySelector(".speed");
+
+var uvEl = document.querySelector(".uvEl");
 
 var forecastCards = document.querySelector(".forecast");
 
@@ -47,8 +51,12 @@ function getWeather(userCity) {
       var temp = data.main.temp;
       var humidity = data.main.humidity;
       var speed = data.wind.speed;
+      var lat = data.coord.lat
+      var lon = data.coord.lon
 
-      // console.log(name,description,icon,temp,humidity,speed);
+      uvResults(lat, lon, uvEl);
+
+      // console.log(name,lat, lon);
 
       nameEl.innerHTML = name + " (" + currentDate + ")";
       iconEl.src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
@@ -72,6 +80,8 @@ function dayForcasts(userCity) {
     .then(function(data) {
       var today = new Date();
       var fDay = new Date();
+
+      forecastCards.innerHTML = "";
 
       for (var i = 0; i < 5; i++) {
         fDay.setDate(today.getDate() + i);
@@ -131,13 +141,14 @@ function searchWeather() {
 
   getWeather(userCity);
   dayForcasts(userCity);
-
+  
   localStorage.setItem(storageKey, userCity);
   storageKey = storageKey + 1;
 
-  forecastCards.innerHTML = "";
-
   displaySearch();
+  uvResults();
+
+  
 }
 
 //---Display Search Function---//
@@ -159,3 +170,39 @@ function displaySearch() {
 }
 
 displaySearch();
+
+//---Testing UV Index Function---//
+
+function uvResults(lat, lon, uvIndex) {
+  fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" 
+    + lat
+    + "&lon="
+    + lon
+    + "&appid="
+    + apiKey
+  )
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var uvResult = data.current.uvi;
+
+      uvIndex.innerHTML = "";
+      
+      uvIndex.innerHTML = "UV Index: " + uvResult;
+
+      if (uvResult < 6) {
+        uvIndex.setAttribute("class", "green")
+      }
+      else if (6 <= uvResult < 8) {
+        uvIndex.setAttribute("class", "yellow")
+      }
+      else {
+        uvIndex.setAttribute("class", "red")
+      }
+    });
+  }
+  
+   
+  
+ 
