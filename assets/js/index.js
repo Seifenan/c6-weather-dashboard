@@ -29,8 +29,6 @@ var forecastCards = document.querySelector(".forecast");
 
 var storageKey = 0;
 
-
-
 //---Get Current Weather Function---//
 function getWeather(userCity) {
   fetch("https://api.openweathermap.org/data/2.5/weather?q=" 
@@ -146,9 +144,7 @@ function searchWeather() {
   storageKey = storageKey + 1;
 
   displaySearch();
-  uvResults();
-
-  
+  // uvResults();
 }
 
 //---Display Search Function---//
