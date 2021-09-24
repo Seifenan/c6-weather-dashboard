@@ -34,9 +34,9 @@ h5 {
   /* text-indent: 50%; */
 }
 
-ul {
-  /* color: black; */
-}
+/* ul {
+  color: black;
+} */
 
 ul:hover {
   text-decoration: underline;
