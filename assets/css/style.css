@@ -2,6 +2,10 @@
   color: white;
 }
 
+h5 {
+  color: black;
+}
+
 .flex {
   display: flex;
   align-items: center;
