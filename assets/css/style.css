@@ -64,3 +64,23 @@ ul:hover {
 .yellow {
   background-color: yellow;
 }
+
+
+.footer {
+  padding: 2%;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: gray;
+}
+
+.fa,
+.footer h2 .lastn,
+.footer p .lastn {
+    color: #070bfa;
+}
+
+/* .fa {
+  color: #0d6efd;
+} */
+
+
